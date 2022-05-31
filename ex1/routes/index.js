@@ -86,7 +86,6 @@ router.get('/ligacoes', function (req, res, next) {
             var lig = []
             dados.forEach(o => {
               if (o.distancia >= query['dist']) {
-                console.log(o.distancia)
                 lig.push({ 'id': o.id, 'idOrigem': o.origem, 'nomeOrigem': cidades[o.origem], 'idDestino': o.destino, 'nomeDestino': cidades[o.destino] })
               }
             })

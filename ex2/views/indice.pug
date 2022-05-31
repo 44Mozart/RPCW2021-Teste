@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1.w3-container.w3-teal.w3-center Termos de Índice
+
+  table.w3-table.w3-bordered
+    tr 
+      th.w3-center Termo
+      th.w3-center ID Classe 
+      th.w3-center Título Classe
+
+    each lis in dados
+      tr 
+        td= lis.termo 
+        td
+         a(href= '/classes/' + lis.idClasse)= lis.idClasse
+        td
+         a(href= '/classes/' + lis.idClasse)= lis.tituloClasse
+  
+  p.w3-container
+   a(href='/') Voltar à Página principal

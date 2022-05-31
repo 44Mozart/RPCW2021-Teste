@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1.w3-container.w3-teal Classes de Primeiro Nível
+
+  table.w3-table.w3-bordered
+   tr
+    th.w3-center Título 
+    th.w3-center Código 
+
+   each c in dados 
+    tr 
+     td= c.titulo
+     td
+      a(href='/classes/' + c.codigo)= c.codigo
+
+  p.w3-container
+   a(href='/') Voltar à página principal
